@@ -32,7 +32,7 @@ public class camascontroller {
         String regexforID = "[A-Z 0-9 a-z]{0,15}";
         if (id == null || !id.matches(regexforID))
             throw new IllegalArgumentException();
-        return "Cama encontrada satisfactoriamente " + id;
+        return "Cama adicionada satisfactoriamente " + id;
     }
 
     @GetMapping("/readCams")
@@ -58,7 +58,7 @@ public class camascontroller {
         String regexforID = "[A-Z 0-9 a-z]{0,15}";
         if (id == null || !id.matches(regexforID))
             throw new IllegalArgumentException();
-        return "Cama ctualizada satisfactoriamente " + id;
+        return "Cama actualizada satisfactoriamente " + id;
     }
 
     @GetMapping("/deleteCams")
