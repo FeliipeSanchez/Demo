@@ -4,10 +4,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.ucundi.spring.domain.camasEntity;
+import com.ucundi.spring.domain.combosEntity;
 import com.ucundi.spring.domain.comidaEntity;
 import com.ucundi.spring.domain.ropaEntity;
 import com.ucundi.spring.domain.serviciosEntity;
 import com.ucundi.spring.repositories.camasRepositories;
+import com.ucundi.spring.repositories.combosRepositories;
 import com.ucundi.spring.repositories.comidaRepositories;
 import com.ucundi.spring.repositories.ropaRepositories;
 import com.ucundi.spring.repositories.serviciosRepositories;
@@ -148,6 +150,7 @@ public class PetStrapData implements CommandLineRunner {
                 serviciosEntity agregarServicio10 = new serviciosEntity("Masaje relajante para gatos", "30 Minutos", 12,
                                 "Gato",
                                 "Pequeño");
+                
 
                 serviciosRepositorio.save(agregarServicio1);
                 serviciosRepositorio.save(agregarServicio2);
@@ -159,6 +162,12 @@ public class PetStrapData implements CommandLineRunner {
                 serviciosRepositorio.save(agregarServicio8);
                 serviciosRepositorio.save(agregarServicio9);
                 serviciosRepositorio.save(agregarServicio10);
+
+
+
+                combosEntity agregarcombo1 = new combosEntity("Combo canino", "200", "20", "0", "1", "2");
+                
+
 
                 System.out.println("Cantidad de Camas");
                 System.out.println("Camas: " + camasRepositorio.count());
