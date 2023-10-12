@@ -29,11 +29,12 @@ public class SecurityConfig {
                         .requestMatchers("/ropa").authenticated()
                         .requestMatchers("/servicios").authenticated()
                         .requestMatchers("/index").authenticated()
-                        .requestMatchers("/api/createCams", "/api/updateCams", "/api/deleteCams" ).authenticated()
-                        .requestMatchers("/api/createComida", "/api/updateComida", "/api/deleteComida" ).authenticated()
-                        .requestMatchers("/api/createRopa", "/api/updateRopa", "/api/deleteRopa" ).authenticated()
-                        .requestMatchers("/api/createServices", "/api/updateServices", "/api/deleteServices" ).authenticated()
-                        .anyRequest().permitAll()
+                        .requestMatchers("/api/createCams","/api/readCams", "/api/updateCams", "/api/deleteCams" ).authenticated()
+                        .requestMatchers("/api/createComida", "/api/readComida", "/api/updateComida", "/api/deleteComida" ).authenticated()
+                        .requestMatchers("/api/createRopa", "/api/readRopa",  "/api/updateRopa", "/api/deleteRopa" ).authenticated()
+                        .requestMatchers("/api/createServices", "/api/readServices",  "/api/updateServices", "/api/deleteServices" ).authenticated()
+                        .requestMatchers("/api/createCombos", "/api/readCombos",  "/api/updateCombos", "/api/deleteCombos" ).authenticated()
+                        .anyRequest().authenticated()
                 )
                 .formLogin(withDefaults());
         // @formatter:on

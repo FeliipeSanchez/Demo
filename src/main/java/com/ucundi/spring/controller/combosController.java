@@ -18,9 +18,12 @@ public class combosController {
     private final combosRepositories combosRepo;
 
     @Autowired
-    public combosController(combosRepositories camsRepo) {
-        this.combosRepo = camsRepo;
+    public combosController(combosRepositories combosRepo) {
+        this.combosRepo = combosRepo;
     }
+
+    
+
 
     @GetMapping("/createCombos")
     public String addCombos() {
